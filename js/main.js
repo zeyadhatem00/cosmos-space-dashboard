@@ -1087,6 +1087,17 @@ function date() {
 }
 
 function load() {
+  todaypic.innerHTML = `  <div
+                id="apod-image-container"
+                class="relative rounded-2xl overflow-hidden group h-[300px] md:h-[400px] lg:h-[600px] bg-slate-800/50 flex items-center justify-center"
+              >
+                <div id="apod-loading" class="text-center">
+                  <i
+                    class="fas fa-spinner fa-spin text-4xl text-blue-400 mb-4"
+                  ></i>
+                  <p class="text-slate-400">Loading today's image...</p>
+                </div>
+              </div>`;
   bydateapi(datevalue);
 }
 
